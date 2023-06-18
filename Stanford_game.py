@@ -1,13 +1,15 @@
 import random
 
-abc = 'abcdefghijklmnopqrstuvwxyz'
+abc = 'abcdefghijklmnopqrstuvwxyz '
 letter_list = list(abc)
-letter_points = [1, 2, 2, 2, 1, 2, 2, 3, 1, 2, 3, 2, 2, 2, 1, 2, 3, 2, 2, 2, 1, 2, 3, 4, 2, 4]
+letter_points = [1, 2, 2, 2, 1, 2, 2, 3, 1, 2, 3, 2, 2, 2, 1, 2, 3, 2, 2, 2, 1, 2, 3, 4, 2, 4, 1]
 main_dict = dict(zip(letter_list, letter_points))
 
 lives = 5
 countries = "United States, United Kingdom, Canada, Australia, Germany, France, Japan, China, Brazil, Peru, " \
-            "India, Mexico, Argentina, South Africa, Egypt, Italy, Spain, Sweden, Saudi Arabia, Nigeria"
+            "India, Mexico, Argentina, South Africa, Egypt, Italy, Spain, Sweden, Saudi Arabia, Nigeria, Argelia, " \
+            "Belgium, Czech Republic, Netherlands, Chile, Venezuela, Cuba, Portugal, Costa Rica, Greece, Kuwait, " \
+            "Colombia, Ireland, Scotland"
 
 country_list = countries.split(", ")
 
@@ -50,7 +52,7 @@ def start_game():
 
     print('\nWelcome to the game!!\nI am thinking a country name of', len_word, 'letters','\nYou have', lives, 'guesses left\n'
      
-                                                                'Available letters: ', abc)
+        'Available letters: ', abc)
     while remaining_lives > 0 and finish_game:
         result = ''
         while True:
